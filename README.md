@@ -1,7 +1,9 @@
 # LinearSearch 
 Es un algoritmo de busqueda secuencial, comienza desde un extremo y
-verifica cada elemento de la lista hasta encontrar el elemento deseado
+verifica cada elemento de la lista hasta encontrar el elemento deseado.
+
 # El algoritmo trabaja de la siguiente forma:
+
 1.- comienza  desde el primer elemento de la lista.
 2.- compara la lista con el elemento  que se esta buscando.
 3.- Si el elemento coincide , el alritmo se termina.
