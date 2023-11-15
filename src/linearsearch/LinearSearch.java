@@ -1,4 +1,4 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
@@ -6,6 +6,7 @@ package linearsearch;
 
 import files.Files;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
@@ -26,9 +27,16 @@ public class LinearSearch {
         }
         return -1;
     }
-
-    public static void main(String[] args) {
-        int[] array = {1, 5, 9, 3, 7, 12, 6};
+    public static void main(String[] args) throws IOException {
+        Files archivo  = new Files();
+        BufferedReader bufer = new BufferedReader(new InputStreamReader(System.in));
+        String fileName ;
+        int[] array;
+        
+        System.out.println("Escribe el nombre del archivo de datos ");
+        fileName = bufer.readLine();
+        array = archivo.fileToInArray(fileName);
+        
         // Establecer el número que se va a encontrar en el arreglo
         int target = 15;
         // Llamar a la función de búsqueda lineal
