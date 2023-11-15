@@ -7,7 +7,7 @@ verifica cada elemento de la lista hasta encontrar el elemento deseado
 3.- Si el elemento coincide , el alritmo se termina.
 4.- si el elemento no coincide con el valor buscado, pasa al siguiente elemento de la lista.
 5.- si el algoritmo al final  no a encontrado el elemento en la lista, pues termina indicando el elemento no es en la lista.
-
+<
 # informacion sacada da:
 Sitio web
 https://www.programiz.com/dsa/linear-search#google_vignette
