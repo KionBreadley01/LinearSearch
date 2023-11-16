@@ -18,35 +18,42 @@ public class LinearSearch {
     /**
      * @param args the command line arguments
      */
- private static int linearSearch(int[] array, int target) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == target) {
-                // La posición del número a encontrar
-                return i;
-            }
-        }
-        return -1;
-    }
     public static void main(String[] args) throws IOException {
-        Files archivo  = new Files();
+        Files archivo  = new Files();//instancia 
         BufferedReader bufer = new BufferedReader(new InputStreamReader(System.in));
         String fileName ;
-        int[] array;
+        int[] array;//arreglo de enteros
+        int target; //se busca el numero 
         
         System.out.println("Escribe el nombre del archivo de datos ");
         fileName = bufer.readLine();
         array = archivo.fileToInArray(fileName);
         
-        // Establecer el número que se va a encontrar en el arreglo
-        int target = 15;
+   
+        System.out.println("¿Que numero quieres buscar?");
+        target = Integer.parseInt(bufer.readLine());
+        
         // Llamar a la función de búsqueda lineal
         int result = linearSearch(array, target);
 
         // Verificar si el número se encontró en el arreglo
         if (result != -1) {
-            System.out.println("El número " + target + " se encuentra en la posición " + result);
+            System.out.println("El número " + target + " se encuentra en la posición " + result + " en la lista " );
         } else {
-            System.out.println("El elemento " + target + " no se encontró en el arreglo.");
+            System.out.println("El numero " + target + " no se encontró en la lista");
         }
+        
     }
+    //la funcion de busqueda 
+      private static int linearSearch(int[] array, int target) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == target) {
+                //Se encontro el numero y posicon del array 
+                return i;
+            }
+        }
+        //El numero no esta en el array 
+        return -1;
+    }
+    
 }
